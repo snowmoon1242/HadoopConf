@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<!-- dfs.permissions.superusergroup
+		ここに指定したグループのUNIXユーザはHadoop上のSuperUserとみなされる -->
+	<property>
+		<name>dfs.permissions.superusergroup</name>
+		<value>hadoop</value>
+	</property>
+	<property>
+		<name>dfs.name.dir</name>
+		<value>${hadoop.tmp.dir}/dfs/name</value>
+	</property>
+	<!-- dfs.data.dir
+		HDFSのデータ領域用に使用するディスク。
+		複数のディレクトリを使用するように構成することが推奨されている-->
+	<property>
+		<name>dfs.data.dir</name>
+		<value>${hadoop.tmp.dir}/dfs/data</value>
+	</property>
+	<!-- dfs.replication
+		HDFS上にいくつデータの複製を持つかを指定する -->
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+
+</configuration>
